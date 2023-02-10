@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  place-items: center;
+}
+#sketcher {
+  width: 500px;
+  height: 500px;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  display: grid;
+  border: 1px solid black;
+}
+.row {
+  display: grid;
+}
+.tile {
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
