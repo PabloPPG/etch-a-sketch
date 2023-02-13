@@ -1,4 +1,5 @@
 const sketcher = document.getElementById("sketcher");
+const clearButton = document.getElementById("clearButton");
 const lowButton = document.getElementById("low");
 const normalButton = document.getElementById("normal");
 const highButton = document.getElementById("high");
@@ -49,6 +50,8 @@ lowButton.addEventListener("click", () => {
 normalButton.addEventListener("click", () => {
   deleteGrid();
   createGrid(16);
+  // clear();
+  paintBlack();
 });
 
 highButton.addEventListener("click", () => {
@@ -59,8 +62,20 @@ highButton.addEventListener("click", () => {
 higherButton.addEventListener("click", () => {
   deleteGrid();
   createGrid(40);
+  paintBlack();
 });
 
-for (let i = 0; i < [...tile].length; i++) {
-  tile[i].addEventListener("mousemove", () => tile[i].classList.add("toBlack"));
+clearButton.addEventListener("click", clear);
+
+function clear() {
+  [...tile].map((x) => {
+    x.className = "tile";
+  });
+}
+function paintBlack() {
+  for (let i = 0; i < [...tile].length; i++) {
+    tile[i].addEventListener("mousemove", () =>
+      tile[i].classList.add("toBlack")
+    );
+  }
 }
