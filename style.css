@@ -1,6 +1,13 @@
 html,
 body {
   height: 100%;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 body {
   display: flex;
@@ -9,24 +16,100 @@ body {
   justify-content: center;
 }
 
+.container {
+  padding: 0px 100px 100px 100px;
+  background-color: red;
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 10%;
+}
+
+h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 3px 3px 5px black, -3px -3px 5px black;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+}
+h2 {
+  font-size: 32px;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+}
+
+.selector-box {
+  padding: 20px;
+  margin: 10% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 1em;
+}
+
+.density-buttons,
+.draw-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
 #sketcher {
-  width: 650px;
-  height: 650px;
+  background-color: white;
+  width: 500px;
+  height: 500px;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;
   display: grid;
-  border: 1px solid black;
+  border: 3px solid rgba(0, 0, 0, 0.9);
+  cursor: crosshair;
 }
 .row {
   display: grid;
 }
 .tile {
   display: flex;
-  border: 1px solid black;
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
 }
 
 .toBlack {
-  background-color: black;
+  background-color: rgb(50, 50, 50);
+}
+
+button {
+  margin: 5%;
+  box-shadow: inset 0px 1px 0px 0px #9acc85;
+  background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+  background-color: #74ad5a;
+  border-radius: 10px;
+  border: 4px solid #3b6e22;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+  background-color: #68a54b;
+}
+button:target {
+  position: relative;
+  top: 1px;
+}
+
+.isClicked {
+  pointer-events: none;
+  background: linear-gradient(to bottom, #527a3f 5%, #68a54b 100%);
+  background-color: #74ad5a;
 }
