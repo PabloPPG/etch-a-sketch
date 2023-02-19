@@ -6,23 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <script src="script.js" defer></script>
-    <title>PPgetch-a-sketch!</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>PPGetch-a-sketch!</title>
 </head>
 
 <body>
 
-    <div>
-        <h2>Pixel density</h2>
-        <button id="low">Low</button>
-        <button id="normal">Normal</button>
-        <button id="high">High</button>
-        <button id="higher">Higher!</button>
-        <button id="clearButton">Clear!</button>
-    </div>
-
-    <div class="container">
-        <div id="sketcher"></div>
+    <div class="flexbox">
+        <div class="container">
+            <h1>ETCH-A-SKETCH!</h1>
+            <div id="sketcher"></div>
+        </div>
+        <div class="selector-box">
+            <div class="density-buttons">
+                <h2>Pixel density</h2>
+                <button id="low">Low</button>
+                <button id="normal" class="isClicked">Normal</button>
+                <button id="high">High</button>
+            </div>
+            <button id="clearButton">Clear!</button>
+            <div class="draw-buttons">
+                <button id="paint-black" class="isClicked">Dark</button>
+                <button id="paint-colorfull">Colorfull!</button>
+            </div>
+        </div>
     </div>
 
 </body>
