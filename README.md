@@ -6,7 +6,8 @@
 
 #### What would I add or change in the future?
 
--Select colours manually
+-Select colours manually.
+
 -Click&drag functionallity, not just mouseover to paint stuff.
 
 I've prefered stop working on this project and keep learning the stuff I need, that's why it may feel unfinished.
